@@ -34,6 +34,8 @@ Some environmental variables showed weak to moderate relationships with plant tr
 Not all variable pairs were statistically significant.  
 Approximately 37.5% of variation in flower production was explained by flowering branch number.  
 
+<img width="1536" height="736" alt="image" src="https://github.com/user-attachments/assets/8d245b0f-ef70-4513-b6c5-08e295e35c5a" />
+
 ## Ecological Interpretation
 
 Prior to analysis, it was expected that dewberry growth would be positively associated with reproductive traits such as flowers per branch, flowering branch number, and leaf area. These traits are typically associated with increased reproductive output and vegetative expansion, particularly in invasive species.
