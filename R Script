@@ -6,17 +6,6 @@
 # Exploring correlations between plant traits and environmental variables
 # in European dewberry populations
 
-# ---- 0. Setup ----
-# Load required packages (install if missing)
-packages <- c()
-
-installed <- packages %in% rownames(installed.packages())
-if(any(!installed)) install.packages(packages[!installed])
-
-# Load libraries
-invisible(lapply(packages, library, character.only = TRUE))
-
-
 # ---- 1. Load dataset ----
 berry_data <- read.csv("dewberries.csv")
 
