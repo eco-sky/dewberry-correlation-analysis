@@ -1,4 +1,4 @@
-# European Dewberry (_Rubus caesius_) Correlation Analysis
+# European Dewberry (*Rubus caesius*) Correlation Analysis
 
 Simple R analysis exploring correlations between plant growth traits and environmental variables in European dewberry populations.
 
@@ -12,7 +12,7 @@ European dewberry (*Rubus caesius*) is an invasive plant species used to study r
 
 Which plant traits and environmental variables are significantly correlated in European dewberry populations?
 
-## Analytical approach  
+## Analytical approach
 
 Summary statistics using `summary()`  
 Pairwise visualization using `pairs()`  
@@ -34,31 +34,57 @@ Some environmental variables showed weak to moderate relationships with plant tr
 Not all variable pairs were statistically significant.  
 Approximately 37.5% of variation in flower production was explained by flowering branch number.  
 
+The figure below shows the pairwise relationships among dewberry traits and environmental variables.
+
 <img width="1536" height="736" alt="image" src="https://github.com/user-attachments/assets/8d245b0f-ef70-4513-b6c5-08e295e35c5a" />
 
-## Ecological Interpretation
+## Ecological Interpretation and Hypotheses
 
-Prior to analysis, it was expected that dewberry growth would be positively associated with reproductive traits such as flowers per branch, flowering branch number, and leaf area. These traits are typically associated with increased reproductive output and vegetative expansion, particularly in invasive species.
+Prior to examining the dataset, several causal relationships were hypothesized based on ecological principles of plant growth and invasive species dynamics.
 
-Environmental variables such as soil moisture were expected to support greater plant growth, while higher dewberry abundance was expected to reflect increased plant productivity and spread.
+It was hypothesized that European dewberry growth would be causally influenced by reproductive and vegetative traits, including the number of flowers per branch, the number of flowering branches, and leaf area. These traits are directly related to plant fitness and reproductive output, and increases in these variables are expected to contribute to greater growth, spread, and invasiveness.
 
-Results indicated that reproductive traits showed the strongest relationships, particularly between flowering branches and flowers per branch. This suggests that plants with greater reproductive structure tend to have higher reproductive output.
+Soil moisture was also expected to have a positive effect on plant growth due to its role in supporting water availability, nutrient uptake, and physiological performance. In addition, higher dewberry abundance was expected to be associated with greater local density, reflecting successful establishment and competitive dominance in suitable habitats.
 
-Weaker relationships were observed for some environmental variables, suggesting that local habitat conditions alone may not fully explain variation in dewberry abundance.
+## Exploratory Pattern Identification
 
-Importantly, correlation does not imply causation, and observed relationships may be influenced by other ecological factors such as plant health, disturbance, or competition.
+After examining the pairwise scatterplot matrix, the strongest observed relationship was between flowering branches and flowers per branch. This relationship appears strongly positive and approximately linear, indicating a strong association between reproductive structure and reproductive output.
 
-## Conclusion
+A second, weaker positive relationship was observed between flowering branches and dewberry cover. However, this relationship shows greater scatter and variability, suggesting a weaker correlation compared to the primary reproductive relationship.
 
-This analysis demonstrates that several plant reproductive traits are significantly correlated in European dewberry populations, while some environmental variables show weaker relationships.
+These patterns suggest that reproductive traits tend to increase together, while relationships involving spatial coverage are more variable.
 
-Overall, reproductive structure appears to be a stronger predictor of variation in dewberry performance than environmental canopy conditions in this dataset.
+## Statistical Interpretation of Correlation Results
 
-However, these results are observational and do not establish causal relationships.
+The correlation between flowering branches and flowers per branch was statistically significant (p < 0.05), indicating that the observed relationship is unlikely to have occurred by random chance.
+
+The correlation coefficient (r = 0.613) indicates a moderate to strong positive linear relationship, meaning that plants with more flowering branches also tend to produce more flowers per branch.
+
+The coefficient of determination (R² = 0.375) indicates that approximately 37.5% of the variation in flowers per branch can be explained by variation in flowering branch number.
+
+This relationship is biologically plausible because plants with greater reproductive investment often exhibit higher floral production and branching capacity.
+
+However, this does not imply causation. The relationship may be influenced by underlying factors such as plant size, nutrient availability, genetic variation, or environmental conditions.
+
+## Confidence Interval Interpretation
+
+The 99% confidence interval for the correlation between flowering branches and flowers per branch was (0.442, 0.740). This indicates that we are 99% confident that the true population correlation lies within this range.
+
+This interval confirms that the relationship is consistently positive and moderately strong under a conservative confidence level.
+
+## Additional Correlation Findings
+
+A statistically significant relationship was observed between flowering branches and dewberry cover. This was determined using `cor.test` in R, where p < 0.05 and r = 0.43, indicating a moderate positive relationship.
+
+Biologically, this relationship is expected because areas with more reproductively active plants tend to have higher overall plant density and greater ground coverage, reflecting successful establishment and spread.
+
+In contrast, no statistically significant relationship was found between canopy cover and dewberry cover. This was determined using `cor.test`, where r = 0.009 and p = 0.921.
+
+Ecologically, this suggests that canopy cover is not a strong limiting factor for dewberry distribution in this dataset. Dewberry plants grow at ground level and can tolerate a wide range of light conditions, meaning that their abundance is more strongly influenced by other environmental drivers such as soil moisture, disturbance, or competition.
 
 ## Data and Code Availability
 
-The full R script used for this analysis is included in this repository.  
+The full R script used for this analysis is included in this repository.
 
 The dataset (`dewberries.csv`) was provided as part of the EVSC 445: Environmental Data Analysis course and was distributed to all students for instructional purposes. I did not create or collect this dataset. I acknowledge its use as a shared class resource for this assignment.
 
