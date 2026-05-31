@@ -1,4 +1,4 @@
-# Dewberry Correlation Analysis (Rubus caesius)
+# Dewberry Correlation Analysis (_Rubus caesius_)
 
 Simple R analysis exploring correlations between plant growth traits and environmental variables in European dewberry populations.
 
